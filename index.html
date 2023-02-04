@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm sorry diwya</title>
+    <link rel="stylesheet" href="her.css">
+
+    <button id="bocchi2">NO</button>
+
+    <script>
+        const button2 = document.getElementById('bocchi2');
+        let left = 35;
+        button2.addEventListener('mouseover', function() {
+          if(left == 20){
+            left = 45;
+          }else{
+            left = 20;
+           
+          }
+          this.style.left = left + '%';
+        });
+        if (window.matchMedia("(max-width: 700px)").matches){
+          let left = 30;
+          button2.addEventListener('mouseenter', function() {
+          if(left == 30){
+            left = 15;
+          }else{
+            left = 30;
+          }
+          this.style.left = left + '%';
+        });
+        }
+        </script>
+        
+
+</head>
+<body>
+    
+<p class="heading">Will you forgive me?</p>
+<img class="pic" src="https://i2-prod.mirror.co.uk/incoming/article25609261.ece/ALTERNATES/s615b/0_PUSS-IN-BOOTS.jpg" alt="">
+<title>Bocchi</title>
+
+
+
+
+    <button id="bocchi1" onclick="openModal()">YES but only this time!</button>
+
+
+    <dialog id="dialog">
+        <img  class="pic1" src="image.png" width="250px" height="250px" alt="">
+        <br/>
+        <center><p>Thank U i'll use words carefully hereafter !</p></center>
+        
+    <button onclick="closeModal()" class="right">close ><</3></button>
+    </dialog>
+
+
+<script>
+    var dailog = document.getElementById("dialog"); 
+
+function openModal() { 
+    
+      dailog.showModal();
+} 
+
+function closeModal() { 
+    dailog.close(); 
+}
+</script>
+
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+<audio id="player" autoplay loop>
+    <source src="sorry.mp3" type="audio/mp3">
+</audio>
+
+
+
+</body>
+</html>
