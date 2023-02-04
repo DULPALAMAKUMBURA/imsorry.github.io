@@ -5,69 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You n Me</title>
-    <link rel="stylesheet" href="partner.css">
-
-    <button id="bocchi2">NO</button>
-    <script>
-        const button2 = document.getElementById('bocchi2');
-        let left = 40;
-        button2.addEventListener('mouseover', function() {
-          if(left == 40){
-            left = 35;
-          }else{
-            left = 40;
-          }
-          this.style.left = left + '%';
-        });
-        if (window.matchMedia("(max-width: 700px)").matches){
-          let left = 30;
-          button2.addEventListener('mouseenter', function() {
-          if(left == 30){
-            left = 15;
-          }else{
-            left = 30;
-          }
-          this.style.left = left + '%';
-        });
+    <style>
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
         }
-        </script>
-        
+        .pic {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            margin-top: 30px;
+        }
+        #bocchi1 {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        #bocchi2 {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 20px;
+            right: 40%;
+            cursor: pointer;
+            transition: right 1s ease-in-out;
+        }
+      #bocchi2 {
+        right: 40%;
+        background-color: red;
+      }
 
+      #bocchi2:hover {
+        transform: translateX(300%) translateY(0%);
+        transition: all 0.1s ease-in-out;
+      }
+        #dialog {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            display: none;
+        }
+        .pic1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+        .right {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <p class="heading">Can we hang out soon?</p>
+    <img class="pic" src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="">
     
-<p class="heading">Can we hang out soon?</p>
-<img class="pic" src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="">
-<title>Bocchi</title>
-
-
-
-
     <button id="bocchi1" onclick="openModal()">YES BBY!</button>
-
-
-    <dialog id="dialog">
-        <img  class="pic1" src="pic.jpg" width="210px" height="250px" alt="">
-        <br/>
-        <center><p>YAYY THANK U ! LOVE U</p></center>
-        
-    <button onclick="closeModal()" class="right">close ><</3></button>
-    </dialog>
-
-
-<script>
-    var dailog = document.getElementById("dialog"); 
-
-function openModal() { 
+    <button id="bocchi2">NO</button>
     
-      dailog.showModal();
-} 
-
-function closeModal() { 
-    dailog.close(); 
-}
-</script>
-
-
-</body>
-</html>
+    <dialog id="dialog">
+        <img class="pic
